@@ -4,6 +4,9 @@ import IconMarkdown from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/markdow
 import IconLemon2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/lemon-2.tsx";
 import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-linkedin.tsx";
 import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-github.tsx";
+import IconMenu2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/menu-2.tsx"
+import IconAlignJustified from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/align-justified.tsx"
+import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/mail.tsx"
 
 type elementProps = {
   // unfortunately necessary as far as i can tell
@@ -21,7 +24,9 @@ type props = { currentroute: string };
 export function Header({ currentroute }: props) {
   const menu: { right: menuItem[]; left: menuItem[] } = {
     left: [
-      { name: "Blog and CV", href: "/", icon: IconMarkdown },
+      { name: "Main", href: "/", icon: IconMenu2},
+      { name: "Blog", href: "/posts", icon: IconMarkdown },
+      { name: "CV", href: "/cv", icon: IconMail}
     ],
     right: [
       {
@@ -36,7 +41,7 @@ export function Header({ currentroute }: props) {
       },
       {
         name: "Project git",
-        href: "https://www.linkedin.com/in/mano-lemmens/",
+        href: "https://github.com/lemna-11/blog-fresh",
         icon: IconBrandGithub,
       },
     ],
@@ -51,7 +56,7 @@ export function Header({ currentroute }: props) {
             w-screen
         `}
     >
-      <div class={tw`flex`}>
+      <div class={tw`flex space-x-6`}>
         {menu.left.map((arg) => (
           <a
             href={arg.href}
