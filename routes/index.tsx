@@ -2,7 +2,7 @@ import { Head } from "$fresh/runtime.ts";
 import { tw } from "twind";
 import { Footer } from "../components/Footer.tsx";
 import { Header } from "../components/Header.tsx";
-import { Sidebar } from "../components/Sidebar.tsx";
+import Sidebar from "../components/Sidebar.tsx";
 
 export default function Home() {
   return (

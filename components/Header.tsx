@@ -1,11 +1,11 @@
 import { tw } from "twind";
-import { menuItem } from "../static/menuTypes.ts";
+import { menuItem } from "../utils/menuTypes.ts";
 import IconMarkdown from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/markdown.tsx";
 import IconLemon2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/lemon-2.tsx";
 import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-linkedin.tsx";
 import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-github.tsx";
 import IconMenu2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/menu-2.tsx";
-import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/mail.tsx";
+import IconFileText from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/file-text.tsx"
 
 type props = { currentroute: string };
 
@@ -14,7 +14,7 @@ export function Header({ currentroute }: props) {
     left: [
       { name: "Main", href: "/", icon: IconMenu2 },
       { name: "Blog", href: "/posts", icon: IconMarkdown },
-      { name: "CV", href: "/cv", icon: IconMail },
+      { name: "CV", href: "/cv", icon: IconFileText },
     ],
     right: [
       {

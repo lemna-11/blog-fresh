@@ -1,5 +1,5 @@
 import { tw } from "twind";
-import { menuItem } from "../static/menuTypes.ts";
+import { menuItem } from "../utils/menuTypes.ts";
 import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/mail.tsx";
 import IconCopyleft from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/copyleft.tsx";
 import IconPhone from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/phone.tsx";
