@@ -4,17 +4,17 @@ import IconMarkdown from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/markdow
 import IconLemon2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/lemon-2.tsx";
 import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-linkedin.tsx";
 import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-github.tsx";
-import IconMenu2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/menu-2.tsx"
-import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/mail.tsx"
+import IconMenu2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/menu-2.tsx";
+import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/mail.tsx";
 
 type props = { currentroute: string };
 
 export function Header({ currentroute }: props) {
   const menu: { right: menuItem[]; left: menuItem[] } = {
     left: [
-      { name: "Main", href: "/", icon: IconMenu2},
+      { name: "Main", href: "/", icon: IconMenu2 },
       { name: "Blog", href: "/posts", icon: IconMarkdown },
-      { name: "CV", href: "/cv", icon: IconMail}
+      { name: "CV", href: "/cv", icon: IconMail },
     ],
     right: [
       {
