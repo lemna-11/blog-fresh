@@ -1,5 +1,5 @@
 import { tw } from "twind";
-import { JSX } from "preact";
+import { menuItem } from "../static/menuTypes.ts";
 import IconMarkdown from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/markdown.tsx";
 import IconLemon2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/lemon-2.tsx";
 import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-linkedin.tsx";
@@ -7,17 +7,6 @@ import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/bran
 import IconMenu2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/menu-2.tsx"
 import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/mail.tsx"
 
-type elementProps = {
-  // unfortunately necessary as far as i can tell
-  // deno-lint-ignore no-explicit-any
-  [x: string]: any;
-  size?: number | undefined;
-  color?: string | undefined;
-  stroke?: number | undefined;
-};
-type element = (prop: elementProps) => JSX.Element;
-
-type menuItem = { name: string; href: string; icon: element };
 type props = { currentroute: string };
 
 export function Header({ currentroute }: props) {
@@ -50,7 +39,7 @@ export function Header({ currentroute }: props) {
     <div
       class={tw`
             flex justify-between
-            px-10 py-4
+            px-10 py-6
             bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300
             w-screen
         `}
