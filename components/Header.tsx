@@ -47,7 +47,7 @@ export function Header({ currentroute }: props) {
       class={tw`
             flex justify-between
             px-10 py-4
-            bg-yellow-100
+            bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300
             w-screen
         `}
     >
@@ -59,8 +59,7 @@ export function Header({ currentroute }: props) {
                         flex
                         ${
               arg.href === currentroute ? "font-bold border-b-2" : ""
-            }
-                        `}
+            }`}
           >
             {arg.icon({ class: "w-6 h-6" })}
             <p>{arg.name}</p>
