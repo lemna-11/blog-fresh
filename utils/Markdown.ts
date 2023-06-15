@@ -13,9 +13,18 @@ const emptyMetadata: metadata = {
   date: new Date(),
 };
 
+export type post = {
+  meta: metadata;
+  content: string;
+};
+const emptyPost: post = {
+  meta: emptyMetadata,
+  content: "",
+};
+
 export async function parseMD(
   name: string,
-): Promise<{ meta: metadata; content: string }> {
+): Promise<post> {
   const md = Marked.parse(await Deno.readTextFile(`./posts/${name}`));
   const meta = emptyMetadata;
   // ugly but works ¯\_(ツ)_/¯
