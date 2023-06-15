@@ -17,7 +17,7 @@ export type post = {
   meta: metadata;
   content: string;
 };
-const emptyPost: post = {
+const _emptyPost: post = {
   meta: emptyMetadata,
   content: "",
 };

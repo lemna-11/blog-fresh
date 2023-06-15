@@ -2,10 +2,9 @@ import { Head } from "$fresh/runtime.ts";
 import { Header } from "./Header.tsx";
 import { tw } from "twind";
 import { Footer } from "./Footer.tsx";
-import { JSX } from "preact/jsx-runtime";
 import Sidebar from "../islands/Sidebar.tsx";
 
-type Props = { title: string; route: string; content: JSX.Element };
+type Props = { title: string; route: string; };
 
 export function Base(props: Props) {
   return (
