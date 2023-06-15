@@ -5,7 +5,7 @@ import IconLemon2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/lemon-2.t
 import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-linkedin.tsx";
 import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-github.tsx";
 import IconMenu2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/menu-2.tsx";
-import IconFileText from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/file-text.tsx"
+import IconFileText from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/file-text.tsx";
 
 type props = { currentroute: string };
 
