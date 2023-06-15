@@ -3,12 +3,14 @@ import { Marked } from "https://raw.githubusercontent.com/ubersl0th/markdown/mas
 export type metadata = {
   title: string;
   author: string;
+  filename: string;
   description?: string;
   date?: Date;
 };
 const emptyMetadata: metadata = {
   title: "",
   author: "",
+  filename: "",
   description: "",
   date: new Date(),
 };
@@ -26,7 +28,8 @@ export async function parseMD(
   name: string,
 ): Promise<post> {
   const md = Marked.parse(await Deno.readTextFile(`./posts/${name}`));
-  const meta = emptyMetadata;
+  const meta = JSON.parse(JSON.stringify(emptyMetadata));
+  meta.filename = name.substring(0, name.indexOf(".md"));
   // ugly but works ¯\_(ツ)_/¯
   for (const [key, value] of Object.entries(md.meta)) {
     if (key === "title") {
