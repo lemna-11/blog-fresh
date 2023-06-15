@@ -4,11 +4,13 @@ import { metadata } from "../utils/Markdown.ts";
 
 export default function Sidebar() {
   const [navigable, setNavigable] = useState<metadata[]>([]);
-  console.log("running")
+  console.log("running");
 
   useEffect(() => {
     const getData = async () => {
-      setNavigable(await (await fetch("http://localhost:8000/api/metadata")).json())
+      setNavigable(
+        await (await fetch("http://localhost:8000/api/metadata")).json(),
+      );
     };
     getData();
   }, []);

@@ -4,7 +4,7 @@ import { tw } from "twind";
 import { Footer } from "./Footer.tsx";
 import Sidebar from "../islands/Sidebar.tsx";
 
-type Props = { title: string; route: string; };
+type Props = { title: string; route: string };
 
 export function Base(props: Props) {
   return (
