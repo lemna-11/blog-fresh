@@ -69,10 +69,10 @@ identical developer experience to React with the claim of being faster and more
 minimal. Although I can't say much about it's performance as this website is
 practically entirely rendered server side with little to no client side
 interactivity it has never gotten in the way of me in it's persuit of minimalism
-and a smaller bundle size.<br> 
-That is also where it becomes very uninteresting, it is trying to implement
-the current standard in a better way but offers nothing in terms of new ideas.
-That lack of ideas keeps me from being all that _"hyped"_ about it.<br>
+and a smaller bundle size.<br> That is also where it becomes very uninteresting,
+it is trying to implement the current standard in a better way but offers
+nothing in terms of new ideas. That lack of ideas keeps me from being all that
+_"hyped"_ about it.<br>
 
 ## Deno
 

@@ -7,15 +7,17 @@ import { getAllMDMeta, metadata, parseMD, post } from "../../utils/Markdown.ts";
 import Sidebar from "../../components/PostSidebar.tsx";
 import { Post } from "../../components/Post.tsx";
 
-export const handler: Handlers<{sidebar: metadata[], post: post}> = {
+export const handler: Handlers<{ sidebar: metadata[]; post: post }> = {
   async GET(_, ctx) {
     const meta = getAllMDMeta();
-    const post = parseMD(`${ctx.params.post_name}.md`)
-    return ctx.render({sidebar: await meta, post: await post});
+    const post = parseMD(`${ctx.params.post_name}.md`);
+    return ctx.render({ sidebar: await meta, post: await post });
   },
 };
 
-export default function Home(props: PageProps<{sidebar: metadata[], post: post}>) {
+export default function Home(
+  props: PageProps<{ sidebar: metadata[]; post: post }>,
+) {
   return (
     <>
       <Head>
@@ -25,7 +27,7 @@ export default function Home(props: PageProps<{sidebar: metadata[], post: post}>
         <Header currentroute="/posts" />
         <div class={tw`flex flex-grow`}>
           <Sidebar data={props.data.sidebar} />
-          <Post post={props.data.post}/>
+          <Post post={props.data.post} />
         </div>
         <Footer />
       </div>
