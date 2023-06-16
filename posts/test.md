@@ -1,7 +1,7 @@
 ---
 title: Test
-author: Mark
-date: 2016-01-01
+author: test
+date: 0001-01-01
 ---
 
 ## TEST
