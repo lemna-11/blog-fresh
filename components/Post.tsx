@@ -10,15 +10,21 @@ export function Post(props: { post: post }) {
   // how else I can do this
   const style = css({
     '& > h1' : {
-      fontSize: '1.5em'
+      fontSize: '1.5em',
+      fontWeight: 'bold',
+      marginLeft: '0.2rem'
     },
 
     '& > h2' : {
-      fontSize: '1.25em'
+      fontSize: '1.25em',
+      fontWeight: 'bold',
+      marginLeft: '0.5rem'
     },
 
     '& > h3' : {
-      fontSize: '1.1em'
+      fontSize: '1.1em',
+      fontWeight: 'bold',
+      marginLeft: '0.75rem'
     },
 
     '& > p' : { 
