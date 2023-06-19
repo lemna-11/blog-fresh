@@ -5,7 +5,7 @@ export type metadata = {
   author: string;
   filename: string;
   description?: string;
-  date?: Date;
+  date: Date;
 };
 const emptyMetadata: metadata = {
   title: "",

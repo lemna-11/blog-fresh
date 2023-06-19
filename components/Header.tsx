@@ -13,7 +13,7 @@ export function Header({ currentroute }: props) {
   const menu: { right: menuItem[]; left: menuItem[] } = {
     left: [
       { name: "Main", href: "/", icon: IconMenu2 },
-      { name: "Blog", href: "/posts", icon: IconMarkdown },
+      { name: "Tech Blog", href: "/posts", icon: IconMarkdown },
       { name: "CV", href: "/cv", icon: IconFileText },
     ],
     right: [

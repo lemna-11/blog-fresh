@@ -9,7 +9,7 @@ export default function PostSidebar(props: { data: metadata[] }) {
             space-y-3
             h-full w-64`}
     >
-      {props.data.map((dp) => (
+      {props.data.sort((a, b) => b.date.valueOf() - a.date.valueOf()).map((dp) => (
         <a href={`/posts/${dp.filename}`}>
           <button
             class={tw`rounded shadow-lg p-2 w-full hover:bg-yellow-50 hover:shadow-yellow-900`}
